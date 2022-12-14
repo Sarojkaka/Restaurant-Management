@@ -16,6 +16,7 @@ public class MainRestaurantPage {
 			System.out.println("3.Customer");
 			System.out.println("4.Order");
 			System.out.println("5.Billing");
+			System.out.println("Test");
 			System.out.println("Enter your choice::");
 			choice = sc.nextInt();
 			if (choice == 1) {
@@ -24,6 +25,10 @@ public class MainRestaurantPage {
 				menu();
 			}else if(choice == 3) {
 				customer();
+			}else if(choice == 4) {
+				System.out.println("this is order page");
+			}else if(choice == 5) {
+				System.out.println("this is billing page");
 			}
 		}
 	}
