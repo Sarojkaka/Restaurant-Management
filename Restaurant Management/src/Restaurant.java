@@ -9,11 +9,44 @@ public class Restaurant {
 		
 		private String menuName;
 		
-		private Integer menuPrice;
+		private Double menuPrice;
 		
 		private String menuDescription;
+		
+		private String orderTakenBy;
+		
+		private int tableNo;
+		
+		private int custId;
+		
+		private int qty;
+		
+		private Integer userid;
+		
+		private String firstname;
+		
+		private String lastname;
+		
+		private Gender gender;
+		
+		private String username;
+		
+		private String password;
+		
+		private UserType usertype;
 
-		public Restaurant(Integer catId, String category, Integer menuId, String menuName, Integer menuPrice,
+		public Restaurant(Integer userid, String firstname, String lastname, Gender gender, String username,
+				String password, UserType usertype) {
+			this.userid = userid;
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.gender = gender;
+			this.username = username;
+			this.password = password;
+			this.usertype = usertype;
+		}
+
+		public Restaurant(Integer catId, String category, Integer menuId, String menuName, Double menuPrice,
 				String menuDescription) {
 			
 			this.catId = catId;
@@ -46,28 +79,71 @@ public class Restaurant {
 		
 
 
-		public Restaurant(Integer catId, String menuName, Integer menuPrice, String menuDescription) {
-			
-			this.catId = catId;
-			
-			this.menuName = menuName;
-			
-			this.menuPrice = menuPrice;
-			
-			this.menuDescription = menuDescription;
+		public Integer getUserid() {
+			return userid;
 		}
 
-		public Restaurant(Integer menuId, String menuName, Integer menuPrice, String menuDescription,Integer catId) {
+		public void setUserid(Integer userid) {
+			this.userid = userid;
+		}
+
+		public String getFirstname() {
+			return firstname;
+		}
+
+		public void setFirstname(String firstname) {
+			this.firstname = firstname;
+		}
+
+		public String getLastname() {
+			return lastname;
+		}
+
+		public void setLastname(String lastname) {
+			this.lastname = lastname;
+		}
+
+		public Gender getGender() {
+			return gender;
+		}
+
+		public void setGender(Gender gender) {
+			this.gender = gender;
+		}
+
+		public String getUsername() {
+			return username;
+		}
+
+		public void setUsername(String username) {
+			this.username = username;
+		}
+
+		public String getPassword() {
+			return password;
+		}
+
+		public void setPassword(String password) {
+			this.password = password;
+		}
+
+		public UserType getUsertype() {
+			return usertype;
+		}
+
+		public void setUsertype(UserType usertype) {
+			this.usertype = usertype;
+		}
+
+		public Restaurant(Integer catId, String menuName, Double menuPrice, String menuDescription) {
 			
-			this.menuId = menuId;
+			this.catId = catId;
 			
 			this.menuName = menuName;
 			
 			this.menuPrice = menuPrice;
 			
 			this.menuDescription = menuDescription;
-			
-			this.catId = catId;
 		}
 
 
@@ -78,6 +154,82 @@ public class Restaurant {
 		
 		public Restaurant(int menuId) {
 			this.menuId = menuId;
+		}
+
+		public Restaurant(Integer menuId, String menuName, Double menuPrice, String menuDescription,
+				Integer catId) {
+			this.menuId = menuId;
+			
+			this.menuName = menuName;
+			
+			this.menuPrice = menuPrice;
+			
+			this.menuDescription = menuDescription;
+			
+			this.catId = catId;
+		}
+
+		public Restaurant(Integer catId, Integer menuId) {
+			this.catId = catId;
+			this.menuId = menuId;
+		}
+
+		public Restaurant(String ordertakenby, int tableno, int qty, int menuId, int custId) {
+			this.orderTakenBy = ordertakenby;
+			
+			this.tableNo = tableno;
+			
+			this.qty = qty;
+			
+		
+			
+			this.menuId = menuId;
+			
+			this.custId = custId;
+			
+		}
+
+
+		public Restaurant(String username, String password) {
+			this.username = username;
+			this.password = password;
+		}
+
+		public Restaurant() {
+			this.username = username;
+			this.password = password;
+		}
+
+		public String getOrderTakenBy() {
+			return orderTakenBy;
+		}
+
+		public void setOrderTakenBy(String orderTakenBy) {
+			this.orderTakenBy = orderTakenBy;
+		}
+
+		public int getTableNo() {
+			return tableNo;
+		}
+
+		public void setTableNo(int tableNo) {
+			this.tableNo = tableNo;
+		}
+
+		public int getCustId() {
+			return custId;
+		}
+
+		public void setCustId(int custId) {
+			this.custId = custId;
+		}
+
+		public int getQty() {
+			return qty;
+		}
+
+		public void setQty(int qty) {
+			this.qty = qty;
 		}
 
 		public Integer getCatId() {
@@ -112,11 +264,11 @@ public class Restaurant {
 			this.menuName = menuName;
 		}
 
-		public Integer getMenuPrice() {
+		public Double getMenuPrice() {
 			return menuPrice;
 		}
 
-		public void setMenuPrice(Integer menuPrice) {
+		public void setMenuPrice(Double menuPrice) {
 			this.menuPrice = menuPrice;
 		}
 

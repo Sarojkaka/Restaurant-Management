@@ -23,7 +23,8 @@ public class RestaurantService {
 		return editcategory;
 	}
 
-	public Restaurant deleteCategory(Restaurant deletecategory)throws ClassNotFoundException, IOException, SQLException {
+	public Restaurant deleteCategory(Restaurant deletecategory)
+			throws ClassNotFoundException, IOException, SQLException {
 		RestaurantDaoInterface dao = new RestaurantDaoDb();
 		dao.deleteCategory(deletecategory);
 		System.out.println("Category Deleted successfully!");
@@ -49,19 +50,21 @@ public class RestaurantService {
 		System.out.println("Menu Updated successfully!");
 		return editmenu;
 	}
-	
-	public Restaurant deleteMenu(Restaurant deletemenu)throws ClassNotFoundException, IOException, SQLException {
+
+	public Restaurant deleteMenu(Restaurant deletemenu) throws ClassNotFoundException, IOException, SQLException {
 		RestaurantDaoInterface dao = new RestaurantDaoDb();
 		dao.deleteMenu(deletemenu);
 		System.out.println("Menu Deleted successfully!");
 		return deletemenu;
 	}
+
 	public Customer addCustomer(Customer addcustomer) throws IOException, SQLException, ClassNotFoundException {
 		RestaurantDaoInterface dao = new RestaurantDaoDb();
 		dao.addCustomer(addcustomer);
 		System.out.println("Customer Save successfully!");
 		return addcustomer;
 	}
+
 	public static void viewAllCustomer() throws ClassNotFoundException, IOException, SQLException {
 		RestaurantDaoInterface dao = new RestaurantDaoDb();
 		dao.viewAllCustomer();
@@ -81,4 +84,36 @@ public class RestaurantService {
 		System.out.println("Customer Deleted Successfully");
 		return deletecust;
 	}
+
+	public static Restaurant viewOrderbyCategory(Restaurant viewOrderbyCategory) throws ClassNotFoundException, IOException, SQLException {
+		RestaurantDaoInterface dao = new RestaurantDaoDb();
+		dao.viewOrderbyCategory(viewOrderbyCategory);
+		return viewOrderbyCategory;
+	}
+
+	public static Restaurant viewBilling(Restaurant viewBilling) throws ClassNotFoundException, IOException, SQLException {
+		RestaurantDaoInterface dao = new RestaurantDaoDb();
+		dao.viewBilling(viewBilling);
+		return viewBilling;
+
+	}
+	public static Restaurant addOrder(Restaurant addorder) throws IOException, SQLException, ClassNotFoundException {
+		RestaurantDaoInterface dao = new RestaurantDaoDb();
+		dao.addorder(addorder);
+		System.out.println("Order Save successfully!");
+		return addorder;
+	}
+
+	public static Restaurant login(String username, String password) throws ClassNotFoundException, IOException, SQLException {
+		RestaurantDaoInterface dao = new RestaurantDaoDb();
+		dao.login(username, password);
+		System.out.println("Login successfully!");
+		return null;
+	}
+
+	public static Restaurant searchById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

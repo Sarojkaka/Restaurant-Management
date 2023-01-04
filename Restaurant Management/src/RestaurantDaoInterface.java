@@ -27,4 +27,15 @@ public interface RestaurantDaoInterface {
 	public void editCust(Customer editcust)throws IOException, ClassNotFoundException, SQLException;
 
 	public void deleteCust(Customer deletecust)throws IOException, ClassNotFoundException, SQLException;
+
+	public void viewBilling(Restaurant viewBilling) throws IOException, ClassNotFoundException, SQLException;
+
+	public void viewOrderbyCategory(Restaurant viewOrderbyCategory) throws IOException, ClassNotFoundException, SQLException;
+
+	public void addorder(Restaurant addorder)throws IOException, ClassNotFoundException, SQLException;
+
+	void login(String username, String password) throws IOException, ClassNotFoundException, SQLException;
+
+
+
 }
